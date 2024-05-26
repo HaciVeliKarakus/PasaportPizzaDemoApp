@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.foodia"
+    namespace = "com.hvk.pasaportpizza"
     compileSdk = 34
 
     defaultConfig {
