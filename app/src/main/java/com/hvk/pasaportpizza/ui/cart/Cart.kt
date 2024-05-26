@@ -79,7 +79,6 @@ fun Cart(
             modifier = Modifier.padding(paddingValues)
         )
     }
-
 }
 
 @Composable
@@ -183,7 +182,7 @@ fun CartContent(
         items(orderLines) { orderLine ->
             SwipeToDisMissItem(
                 background = { offsetX ->
-                    val backgroundColor = if (offsetX < -160.dp) {
+                    val backgroundColor = if (offsetX < (-160).dp) {
                         MaterialTheme.colorScheme.error
                     } else {
                         MaterialTheme.colorScheme.surface
@@ -207,7 +206,7 @@ fun CartContent(
         }
         item {
             SummaryItem(
-                subTotal = orderLines.map { it.foodItem.price * it.count }.sum(),
+                subTotal = orderLines.sumOf { it.foodItem.price * it.count },
                 shippingCosts = 369
             )
         }
