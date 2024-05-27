@@ -14,7 +14,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.hvk.pasaportpizza.ui.cart.Cart
 import com.hvk.pasaportpizza.ui.detail.FoodDetail
-import com.hvk.pasaportpizza.ui.home.Feed
+import com.hvk.pasaportpizza.ui.home.FeedContent
 import com.hvk.pasaportpizza.ui.onboarding.OnBoardingScreen
 
 const val DetailRoute = "DetailScreen"
@@ -37,7 +37,7 @@ fun FoodiaNavigationHost(
 ) {
     NavHost(navController = navController, startDestination = startDestination) {
         composable(Tabs.Feed.route) {
-            Feed(onFoodClick = { navController.navigate("$DetailRoute/$it") })
+            FeedContent(onFoodClick = { navController.navigate("$DetailRoute/$it") })
         }
         composable(
             route = "$DetailRoute/{id}",
