@@ -49,13 +49,13 @@ fun FoodiaNavigationHost(
             }
         }
 
-        composable(route = Tabs.Cart.route) { from ->
+        composable(route = Tabs.Cart.route) {
             Cart(
-                onFoodItemClick = { id -> },
+                onFoodItemClick = { },
                 modifier = modifier
             )
         }
-        composable(route = OnBoardingRoute) { from ->
+        composable(route = OnBoardingRoute) {
             OnBoardingScreen {
                 navController.navigateToBottomBarRoute(Tabs.Feed.route)
             }

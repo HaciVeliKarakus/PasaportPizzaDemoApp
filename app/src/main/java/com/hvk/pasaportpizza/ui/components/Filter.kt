@@ -62,7 +62,6 @@ fun FilterBar(
             FilterChip(filter = filters)
         }
     }
-
 }
 
 
